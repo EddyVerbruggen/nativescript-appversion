@@ -1,0 +1,27 @@
+{
+  "name": "nativescript-appversion",
+  "version": "1.0.0",
+  "description": "Read the version of your NativeScript app.",
+  "main": "appversion.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eddyverbruggen/nativescript-appversion.git"
+  },
+  "keywords": [
+    "NativeScript"
+  ],
+  "author": {
+    "name": "Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com",
+    "url": "http://x-services.nl/"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/eddyverbruggen/nativescript-appversion/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/eddyverbruggen/nativescript-appversion/issues"
+  },
+  "homepage": "https://github.com/eddyverbruggen/nativescript-appversion",
+  "readmeFilename": "README.md"
+}
