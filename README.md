@@ -7,20 +7,24 @@ For iOS we read it from `*.plist`'s `CFBundleShortVersionString`.
 For Android we read the `versionName` from `AndroidManifest.xml`.
 
 ## Installation
-From the command prompt go to your app's `app` folder and execute:
+Run the following command from the root of your project:
 
 ```
-npm install nativescript-appversion
+tns plugin add nativescript--appversion
 ```
 
 ## Usage
 
+To use this plugin you must first require() it:
+
+```js
+var appversion = require("nativescript-appversion");
+```
+
 ### getVersionName
 
 ```js
-  var appversion = require("./node_modules/nativescript-appversion/appversion");
-
   appversion.getVersionName().then(function(v) {
-      alert("Version: " + v);
+      console.log("Your app version is: " + v);
   })
 ```
