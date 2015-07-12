@@ -10,7 +10,7 @@ For Android we read the `versionName` from `AndroidManifest.xml`.
 Run the following command from the root of your project:
 
 ```
-tns plugin add nativescript--appversion
+tns plugin add nativescript-appversion
 ```
 
 ## Usage
