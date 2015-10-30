@@ -1,9 +1,9 @@
 var application = require("application");
-var context = application.android.context;
 
 exports.getVersionName = function () {
   return new Promise(function (resolve, reject) {
     try {
+      var context = application.android.context;
       var packageManager = context.getPackageManager();
       resolve(packageManager.getPackageInfo(context.getPackageName(), 0).versionName);
     } catch (ex) {
