@@ -2,14 +2,15 @@ var application = require("application");
 
 exports.getAppId = function() {
   return new Promise(function(resolve, reject) {
-    function _resolve(context) {
+    function _resolve() {
+      var context = application.android.context;
       resolve(context.getPackageName());
     }
     try {
-      var context = application.android.context;
-      if (context) {
-        _resolve(context);
+      if (application.android.context) {
+        _resolve();
       } else {
+        // if this is called before application.start() wait for the event to fire
         application.on(application.launchEvent, _resolve);
       }
     } catch (ex) {
@@ -21,15 +22,16 @@ exports.getAppId = function() {
 
 exports.getVersionName = function() {
   return new Promise(function(resolve, reject) {
-    function _resolve(context) {
+    function _resolve() {
+      var context = application.android.context;
       var packageManager = context.getPackageManager();
       resolve(packageManager.getPackageInfo(context.getPackageName(), 0).versionName);
     }
     try {
-      var context = application.android.context;
-      if (context) {
-        _resolve(context);
+      if (application.android.context) {
+        _resolve();
       } else {
+        // if this is called before application.start() wait for the event to fire
         application.on(application.launchEvent, _resolve);
       }
     } catch (ex) {
