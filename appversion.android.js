@@ -40,3 +40,18 @@ exports.getVersionName = function() {
     }
   });
 };
+
+// Added By KingAndroid {{{
+exports.getVersionCode = function() {
+  return new Promise(function(resolve, reject) {
+    try {
+      var context = application.android.context;
+      var packageManager = context.getPackageManager();
+      resolve(packageManager.getPackageInfo(context.getPackageName(), 0).versionCode);
+    } catch (ex) {
+      console.log("Error in appversion.getVersionCode: " + ex);
+      reject(ex);
+    }
+  });
+};
+// }}} Added By KingAndroid
