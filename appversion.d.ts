@@ -12,4 +12,11 @@ declare module "nativescript-appversion" {
      * - For Android we read the package name.
      */
     export function getAppId(): Promise<string>;
+
+    /**
+     * Returns the version code (build number) of your app.
+     * - For iOS we read it from *.plist's CFBundleVersion.
+     * - For Android we read the versionCode from AndroidManifest.xml.
+     */
+    export function getVersionCode(): Promise<string>;
 }

@@ -9,15 +9,26 @@ exports.getAppId = function() {
   });
 };
 
-var VERSION_KEY = "CFBundleShortVersionString";
-
 exports.getVersionName = function() {
   return new Promise(function(resolve, reject) {
     try {
-      resolve(NSBundle.mainBundle().infoDictionary.objectForKey(VERSION_KEY));
+      resolve(NSBundle.mainBundle().infoDictionary.objectForKey("CFBundleShortVersionString"));
     } catch (ex) {
       console.log("Error in appversion.getVersionName: " + ex);
       reject(ex);
     }
   });
 };
+
+// Added By KingAndroid {{{
+exports.getVersionCode = function() {
+  return new Promise(function(resolve, reject) {
+    try {
+      resolve(NSBundle.mainBundle().infoDictionary.objectForKey("CFBundleVersion"));
+    } catch (ex) {
+      console.log("Error in appversion.getVersionCode: " + ex);
+      reject(ex);
+    }
+  });
+};
+// }}} Added By KingAndroid
