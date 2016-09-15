@@ -41,7 +41,6 @@ exports.getVersionName = function() {
   });
 };
 
-// Added By KingAndroid {{{
 exports.getVersionCode = function() {
   return new Promise(function(resolve, reject) {
     try {
@@ -54,4 +53,3 @@ exports.getVersionCode = function() {
     }
   });
 };
-// }}} Added By KingAndroid

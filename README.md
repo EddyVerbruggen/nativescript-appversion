@@ -29,6 +29,14 @@ var appversion = require("nativescript-appversion");
   });
 ```
 
+### getVersionCode
+
+```js
+  appversion.getVersionCode().then(function(v) {
+      console.log("Your app's version code is: " + v);
+  });
+```
+
 ### getAppId
 
 ```js
