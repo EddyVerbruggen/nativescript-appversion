@@ -28,7 +28,7 @@ exports.getVersionCode = function() {
   return new Promise(function(resolve, reject) {
     try {
       var mainBundle = utils.ios.getter(NSBundle, NSBundle.mainBundle);
-      resolve(mainBundle.objectForKey("CFBundleVersion"));
+      resolve(mainBundle.infoDictionary.objectForKey("CFBundleVersion"));
     } catch (ex) {
       console.log("Error in appversion.getVersionCode: " + ex);
       reject(ex);
