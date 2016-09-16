@@ -1,7 +1,10 @@
+var utils = require("utils/utils");
+
 exports.getAppId = function() {
   return new Promise(function(resolve, reject) {
     try {
-      resolve(NSBundle.mainBundle().bundleIdentifier);
+      var mainBundle = utils.ios.getter(NSBundle, NSBundle.mainBundle);
+      resolve(mainBundle.bundleIdentifier);
     } catch (ex) {
       console.log("Error in appversion.getAppId: " + ex);
       reject(ex);
@@ -12,7 +15,8 @@ exports.getAppId = function() {
 exports.getVersionName = function() {
   return new Promise(function(resolve, reject) {
     try {
-      resolve(NSBundle.mainBundle().infoDictionary.objectForKey("CFBundleShortVersionString"));
+      var mainBundle = utils.ios.getter(NSBundle, NSBundle.mainBundle);
+      resolve(mainBundle.infoDictionary.objectForKey("CFBundleShortVersionString"));
     } catch (ex) {
       console.log("Error in appversion.getVersionName: " + ex);
       reject(ex);
@@ -23,7 +27,8 @@ exports.getVersionName = function() {
 exports.getVersionCode = function() {
   return new Promise(function(resolve, reject) {
     try {
-      resolve(NSBundle.mainBundle().infoDictionary.objectForKey("CFBundleVersion"));
+      var mainBundle = utils.ios.getter(NSBundle, NSBundle.mainBundle);
+      resolve(mainBundle.objectForKey("CFBundleVersion"));
     } catch (ex) {
       console.log("Error in appversion.getVersionCode: " + ex);
       reject(ex);

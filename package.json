@@ -1,12 +1,12 @@
 {
   "name": "nativescript-appversion",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Read the version of your NativeScript app",
   "main": "appversion.js",
   "nativescript": {
     "platforms": {
-      "ios": "1.1.0",
-      "android": "1.1.0"
+      "ios": "2.3.0",
+      "android": "2.3.0"
     }
   },
   "repository": {
@@ -17,6 +17,9 @@
     "NativeScript",
     "App Version",
     "Version",
+    "App ID",
+    "AppId",
+    "CFBundleVersion",
     "CFBundleShortVersionString"
   ],
   "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
