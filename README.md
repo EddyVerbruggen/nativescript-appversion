@@ -25,8 +25,16 @@ var appversion = require("nativescript-appversion");
 
 ### getVersionName
 
+#### JavaScript
 ```js
   appversion.getVersionName().then(function(v) {
+      console.log("Your app's version is: " + v);
+  });
+```
+
+#### TypeScript
+```js
+  appversion.getVersionName().then((v: string) {
       console.log("Your app's version is: " + v);
   });
 ```
