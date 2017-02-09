@@ -1,6 +1,6 @@
 {
   "name": "nativescript-appversion",
-  "version": "1.3.4",
+  "version": "1.3.2",
   "description": "Read the version of your NativeScript app",
   "main": "appversion",
   "nativescript": {
@@ -22,8 +22,8 @@
     "CFBundleVersion",
     "CFBundleShortVersionString"
   ],
-  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
+  "author": "Oscar Lodriguez <oscar.lodriguez@essent.nl> (https://github.com/Essent)",
   "license": "MIT",
-  "bugs": "https://github.com/eddyverbruggen/nativescript-appversion/issues",
-  "homepage": "https://github.com/eddyverbruggen/nativescript-appversion"
+  "bugs": "https://github.com/code0wl/nativescript-appversion/issues",
+  "homepage": "https://github.com/code0wl/nativescript-appversion"
 }
