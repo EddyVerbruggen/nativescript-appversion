@@ -1,7 +1,7 @@
 var application = require("application");
 
-exports.getAppId = function () {
-  return new Promise(function (resolve, reject) {
+exports.getAppId = function() {
+  return new Promise(function(resolve, reject) {
     function _resolve() {
       var context = application.android.context;
       resolve(context.getPackageName());
@@ -20,8 +20,8 @@ exports.getAppId = function () {
   });
 };
 
-exports.getVersionName = function () {
-  return new Promise(function (resolve, reject) {
+exports.getVersionName = function() {
+  return new Promise(function(resolve, reject) {
     function _resolve() {
       var packageManager = application.android.context.getPackageManager();
       resolve(packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionName);
@@ -40,8 +40,8 @@ exports.getVersionName = function () {
   });
 };
 
-exports.getVersionCode = function () {
-  return new Promise(function (resolve, reject) {
+exports.getVersionCode = function() {
+  return new Promise(function(resolve, reject) {
     try {
       var packageManager = application.android.context.getPackageManager();
       resolve(packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionCode);
