@@ -1,6 +1,6 @@
 # NativeScript AppVersion
 
-> Read the version and package ID of your NativeScript app.
+Read the current version and package ID of your NativeScript app.
 
 * For iOS we read it from `*.plist`'s `CFBundleShortVersionString`.
 * For Android we read the `versionName` from `AndroidManifest.xml`.
