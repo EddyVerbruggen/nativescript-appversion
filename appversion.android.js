@@ -20,6 +20,10 @@ exports.getAppId = function() {
   });
 };
 
+exports.getAppIdSync = function() {
+  return application.android.context.getPackageName();
+};
+
 exports.getVersionName = function() {
   return new Promise(function(resolve, reject) {
     function _resolve() {
@@ -40,6 +44,11 @@ exports.getVersionName = function() {
   });
 };
 
+exports.getVersionNameSync = function() {
+  var packageManager = application.android.context.getPackageManager();
+  return packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionName;
+};
+
 exports.getVersionCode = function() {
   return new Promise(function(resolve, reject) {
     try {
@@ -50,4 +59,9 @@ exports.getVersionCode = function() {
       reject(ex);
     }
   });
+};
+
+exports.getVersionCodeSync = function() {
+  var packageManager = application.android.context.getPackageManager();
+  return packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionCode;
 };

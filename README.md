@@ -1,9 +1,16 @@
 # NativeScript AppVersion
 
-Read the current version and package ID of your NativeScript app.
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][npm-url]
+[![Twitter Follow][twitter-image]][twitter-url]
 
-* For iOS we read it from `*.plist`'s `CFBundleShortVersionString`.
-* For Android we read the `versionName` from `AndroidManifest.xml`.
+[npm-image]:http://img.shields.io/npm/v/nativescript-appversion.svg
+[npm-url]:https://npmjs.org/package/nativescript-appversion
+[downloads-image]:http://img.shields.io/npm/dm/nativescript-appversion.svg
+[twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me
+[twitter-url]:https://twitter.com/eddyverbruggen
+
+Read the current Package ID and Version (name and code) of your NativeScript app.
 
 ## Installation
 Run the following command from the root of your project:
@@ -14,13 +21,20 @@ tns plugin add nativescript-appversion
 
 ## Usage
 
-To use this plugin you must first require() it:
+To use this plugin you must first require / import it:
 
+#### JavaScript
 ```js
 var appversion = require("nativescript-appversion");
 ```
 
-### getVersionName
+#### TypeScript
+```js
+import * as AppVersion from "nativescript-appversion";
+```
+
+### getVersionName(Sync)
+`getVersionNameSync` is the same as `getVersionName`, except it doesn't return a Promise.
 
 #### JavaScript
 ```js
@@ -36,7 +50,7 @@ var appversion = require("nativescript-appversion");
   });
 ```
 
-### getVersionCode
+### getVersionCode(Sync)
 
 #### JavaScript
 ```js
@@ -52,7 +66,7 @@ var appversion = require("nativescript-appversion");
   });
 ```
 
-### getAppId
+### getAppId(Sync)
 
 #### JavaScript
 ```js

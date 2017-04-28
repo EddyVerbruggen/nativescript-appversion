@@ -12,6 +12,10 @@ exports.getAppId = function() {
   });
 };
 
+exports.getAppIdSync = function() {
+  return utils.ios.getter(NSBundle, NSBundle.mainBundle).bundleIdentifier;
+};
+
 exports.getVersionName = function() {
   return new Promise(function(resolve, reject) {
     try {
@@ -24,6 +28,10 @@ exports.getVersionName = function() {
   });
 };
 
+exports.getVersionNameSync = function() {
+  return utils.ios.getter(NSBundle, NSBundle.mainBundle).infoDictionary.objectForKey("CFBundleShortVersionString");
+};
+
 exports.getVersionCode = function() {
   return new Promise(function(resolve, reject) {
     try {
@@ -34,4 +42,8 @@ exports.getVersionCode = function() {
       reject(ex);
     }
   });
+};
+
+exports.getVersionCodeSync = function() {
+  return utils.ios.getter(NSBundle, NSBundle.mainBundle).infoDictionary.objectForKey("CFBundleVersion");
 };
