@@ -29,8 +29,8 @@ var appversion = require("nativescript-appversion");
 ```
 
 #### TypeScript
-```js
-import * as AppVersion from "nativescript-appversion";
+```typescript
+import * as appversion from "nativescript-appversion";
 ```
 
 ### getVersionName(Sync)
@@ -44,8 +44,8 @@ import * as AppVersion from "nativescript-appversion";
 ```
 
 #### TypeScript
-```js
-  appversion.getVersionName().then((v: string) {
+```typescript
+  appversion.getVersionName().then((v: string) => {
       console.log("Your app's version is: " + v);
   });
 ```
@@ -60,8 +60,8 @@ import * as AppVersion from "nativescript-appversion";
 ```
 
 #### TypeScript
-```js
-  appversion.getVersionCode().then((v: string) {
+```typescript
+  appversion.getVersionCode().then((v: string) => {
       console.log("Your app's version code is: " + v);
   });
 ```
@@ -76,8 +76,8 @@ import * as AppVersion from "nativescript-appversion";
 ```
 
 #### TypeScript
-```js
-  appversion.getAppId().then((id: string) {
+```typescript
+  appversion.getAppId().then((id: string) => {
       console.log("Your app's id is: " + id);
   });
 ```
