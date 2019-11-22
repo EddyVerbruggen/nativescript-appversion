@@ -1,6 +1,6 @@
 {
   "name": "nativescript-appversion",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Read the version of your NativeScript app",
   "main": "appversion",
   "typings": "appversion.d.ts",
