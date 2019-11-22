@@ -53,7 +53,7 @@ exports.getVersionCode = function() {
   return new Promise(function(resolve, reject) {
     try {
       var packageManager = application.android.context.getPackageManager();
-      resolve(packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionCode);
+      resolve(packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionCode.toString());
     } catch (ex) {
       console.log("Error in appversion.getVersionCode: " + ex);
       reject(ex);
@@ -63,5 +63,5 @@ exports.getVersionCode = function() {
 
 exports.getVersionCodeSync = function() {
   var packageManager = application.android.context.getPackageManager();
-  return packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionCode;
+  return packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionCode.toString();
 };
