@@ -1,4 +1,4 @@
-var application = require("tns-core-modules/application");
+var application = require("@nativescript/core/application");
 
 exports.getAppId = function() {
   return new Promise(function(resolve, reject) {
