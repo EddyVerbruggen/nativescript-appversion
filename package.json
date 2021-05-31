@@ -28,7 +28,7 @@
   "bugs": "https://github.com/eddyverbruggen/nativescript-appversion/issues",
   "homepage": "https://github.com/eddyverbruggen/nativescript-appversion",
   "devDependencies": {
-    "tns-core-modules": "~5.4.2",
-    "tns-platform-declarations": "~5.4.2"
+    "@nativescript/core": "~7.0.0",
+    "@nativescript/types": "~7.0.0"
   }
 }
