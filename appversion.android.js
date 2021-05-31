@@ -1,7 +1,7 @@
 var application = require("@nativescript/core/application");
 
-exports.getAppId = function () {
-  return new Promise(function (resolve, reject) {
+exports.getAppId = function() {
+  return new Promise(function(resolve, reject) {
     function _resolve() {
       var context = application.android.context;
       resolve(context.getPackageName());
@@ -20,20 +20,15 @@ exports.getAppId = function () {
   });
 };
 
-exports.getAppIdSync = function () {
+exports.getAppIdSync = function() {
   return application.android.context.getPackageName();
 };
 
-exports.getVersionName = function () {
-  return new Promise(function (resolve, reject) {
+exports.getVersionName = function() {
+  return new Promise(function(resolve, reject) {
     function _resolve() {
       var packageManager = application.android.context.getPackageManager();
-      resolve(
-        packageManager.getPackageInfo(
-          application.android.context.getPackageName(),
-          0
-        ).versionName
-      );
+      resolve(packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionName);
     }
     try {
       if (application.android.context) {
@@ -49,25 +44,16 @@ exports.getVersionName = function () {
   });
 };
 
-exports.getVersionNameSync = function () {
+exports.getVersionNameSync = function() {
   var packageManager = application.android.context.getPackageManager();
-  return packageManager.getPackageInfo(
-    application.android.context.getPackageName(),
-    0
-  ).versionName;
+  return packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionName;
 };
 
-exports.getVersionCode = function () {
-  return new Promise(function (resolve, reject) {
+exports.getVersionCode = function() {
+  return new Promise(function(resolve, reject) {
     try {
       var packageManager = application.android.context.getPackageManager();
-      resolve(
-        "" +
-          packageManager.getPackageInfo(
-            application.android.context.getPackageName(),
-            0
-          ).versionCode
-      );
+      resolve("" + packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionCode);
     } catch (ex) {
       console.log("Error in appversion.getVersionCode: " + ex);
       reject(ex);
@@ -75,13 +61,7 @@ exports.getVersionCode = function () {
   });
 };
 
-exports.getVersionCodeSync = function () {
+exports.getVersionCodeSync = function() {
   var packageManager = application.android.context.getPackageManager();
-  return (
-    "" +
-    packageManager.getPackageInfo(
-      application.android.context.getPackageName(),
-      0
-    ).versionCode
-  );
+  return "" + packageManager.getPackageInfo(application.android.context.getPackageName(), 0).versionCode;
 };
