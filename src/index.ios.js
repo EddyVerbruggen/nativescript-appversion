@@ -1,4 +1,4 @@
-exports.getAppId = function() {
+export const getAppId = function() {
   return new Promise(function(resolve, reject) {
     try {
       resolve(NSBundle.mainBundle.bundleIdentifier);
@@ -9,11 +9,11 @@ exports.getAppId = function() {
   });
 };
 
-exports.getAppIdSync = function() {
+export const getAppIdSync = function() {
   return NSBundle.mainBundle.bundleIdentifier;
 };
 
-exports.getVersionName = function() {
+export const getVersionName = function() {
   return new Promise(function(resolve, reject) {
     try {
       resolve(NSBundle.mainBundle.infoDictionary.objectForKey("CFBundleShortVersionString"));
@@ -24,11 +24,11 @@ exports.getVersionName = function() {
   });
 };
 
-exports.getVersionNameSync = function() {
+export const getVersionNameSync = function() {
   return NSBundle.mainBundle.infoDictionary.objectForKey("CFBundleShortVersionString");
 };
 
-exports.getVersionCode = function() {
+export const getVersionCode = function() {
   return new Promise(function(resolve, reject) {
     try {
       resolve(NSBundle.mainBundle.infoDictionary.objectForKey("CFBundleVersion"));
@@ -39,6 +39,6 @@ exports.getVersionCode = function() {
   });
 };
 
-exports.getVersionCodeSync = function() {
+export const getVersionCodeSync = function() {
   return NSBundle.mainBundle.infoDictionary.objectForKey("CFBundleVersion");
 };

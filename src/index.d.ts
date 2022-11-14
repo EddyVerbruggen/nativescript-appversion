@@ -1,4 +1,4 @@
-declare module "nativescript-appversion" {
+declare module "@nativescript/appversion" {
     /**
      * Returns the version of your app.
      * - For iOS we read it from *.plist's CFBundleShortVersionString.
