@@ -1,0 +1,34 @@
+{
+  "name": "@nativescript/appversion",
+  "version": "2.0.1",
+  "description": "Read the version of your NativeScript app",
+  "main": "index",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "ios": "2.3.0",
+      "android": "2.3.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eddyverbruggen/nativescript-appversion.git"
+  },
+  "keywords": [
+    "NativeScript",
+    "App Version",
+    "Version",
+    "App ID",
+    "AppId",
+    "CFBundleVersion",
+    "CFBundleShortVersionString"
+  ],
+  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
+  "license": "MIT",
+  "bugs": "https://github.com/eddyverbruggen/nativescript-appversion/issues",
+  "homepage": "https://github.com/eddyverbruggen/nativescript-appversion",
+  "devDependencies": {
+    "@nativescript/core": "rc",
+    "@nativescript/types": "rc"
+  }
+}
