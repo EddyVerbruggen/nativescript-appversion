@@ -4,7 +4,7 @@
 [![Downloads][downloads-image]][npm-url]
 [![Twitter Follow][twitter-image]][twitter-url]
 
-[npm-image]:http://img.shields.io/npm/v/nativescript-appversion.svg
+[npm-image]:https://img.shields.io/badge/npm-2.0.1-green
 [npm-url]:https://npmjs.org/package/nativescript-appversion
 [downloads-image]:http://img.shields.io/npm/dm/nativescript-appversion.svg
 [twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me
